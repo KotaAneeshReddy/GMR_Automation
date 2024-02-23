@@ -1,0 +1,40 @@
+footer {
+  background: var(--color-primary);
+  padding: 3rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 7rem;
+}
+
+footer a {
+  color: var(--color-bg);
+  display: flex;
+  justify-content: center;
+}
+
+/* Style logo from navbar */
+
+.permalinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0 auto 3rem;
+}
+
+.footer_copyright {
+  margin-bottom: 4rem;
+  color: var(--color-bg);
+}
+
+#footer_logo {
+  width: 10%;
+  height: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .permalinks {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

@@ -1,0 +1,25 @@
+.floating-button{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    cursor: pointer;
+    width: 40px;
+    height: auto;
+    /* color: var(--color-primary); */
+    color: #25d366;
+    /* background-color: var(--color-primary); */
+    border-radius: 40%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.8);
+    transition: var(--transition);
+    z-index: 1;
+}
+.floating-button:hover{
+    transform: scale(1.1);
+}
+
+@media screen and (max-width:600px) {
+    .floating-button{
+        width: 30px;
+    }
+}

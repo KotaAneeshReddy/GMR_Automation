@@ -1,0 +1,58 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto; /* Allow vertical scrolling within the modal-overlay */
+  z-index: 999;
+}
+
+.modal-content {
+  width: 80%; /* Adjust as needed */
+  max-width: 600px; /* Maximum width for larger screens */
+  max-height: calc(80vh - 10px);
+  overflow-y: auto; /* Allow vertical scrolling within the modal-content */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content p {
+  margin-bottom: 10px;
+}
+
+.modal-close-button {
+  text-align: right;
+}
+
+.modal-close-button button {
+  font-size: large;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.modal-content h2 {
+  margin-top: 2rem; /* Add space above the title */
+  margin-bottom: 2rem;
+  text-align: center;
+  /* color: var(--color-primary-variant); */
+}
+
+.alert-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
