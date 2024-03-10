@@ -1,3 +1,8 @@
+.main-products {
+  background-color: var(--color-primary-variant);
+  padding: 3rem 0 1rem;
+}
+
 .products_container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

@@ -29,25 +29,26 @@ function About() {
                 icon={faCircleHalfStroke}
               />
               <h5>Experience</h5>
-              <small>3+ Years in Industry</small>
+              <small>10+ Years in Industry</small>
             </article>
             <article className="about_card">
               <FontAwesomeIcon icon={faUsers} className="about_icon" />
               <h5>Clients</h5>
-              <small>100+ Happy Clients</small>
+              <small>250+ Happy Clients</small>
             </article>
             <article className="about_card">
               <FontAwesomeIcon icon={faDiagramProject} className="about_icon" />
               <h5>Projects</h5>
-              <small>80+ Completed</small>
+              <small>400+ Completed</small>
             </article>
           </div>
 
           <p>
-            Welcome to GMR Automation.Your premier destination for comprehensive
-            automation solutions. From automated gates and barriers to advanced
-            CCTV systems and fire safety gadgets, we specialize in securing your
-            spaces with cutting-edge technology and expert craftsmanship.
+            Welcome to GMR Automation. Your premier destination for
+            comprehensive automation solutions. From automated gates and
+            barriers to advanced CCTV systems and fire safety gadgets, we
+            specialize in securing your spaces with cutting-edge technology and
+            expert craftsmanship.
           </p>
           <Link to="/aboutus">
             <a href="#contact" className="btn btn-primary">

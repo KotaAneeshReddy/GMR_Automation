@@ -25,17 +25,17 @@ const Knowmore = () => {
             <p>
               Welcome to GMR Automation, where innovation meets security. With a
               passion for excellence and a commitment to safety, we specialize
-              in providing comprehensive automation solutions for both
-              residential and commercial properties.
+              in providing entrance automation Access control and CCTV solutions
+              for both residential and commercial properties.
             </p>
             <p>
               At GMR Automation, we understand the importance of protecting your
               spaces. That's why we offer a wide range of services, including
               the installation, maintenance, and repair of automated gates, boom
-              barriers, flap barriers, CCTV systems, and fire safety gadgets.
-              Our team of highly skilled technicians combines expertise with
-              state-of-the-art technology to deliver seamless solutions tailored
-              to your unique needs.
+              barriers, flap barriers, Access control, CCTV systems, and fire
+              safety solutions. Our team of highly skilled technicians combines
+              expertise with state-of-the-art technology to deliver seamless
+              solutions tailored to your unique needs.
             </p>
           </div>
         </div>

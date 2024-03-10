@@ -9,8 +9,8 @@ function Contact() {
   const [formState, setFormState] = useState({});
   const form = useRef();
 
-  const YOUR_LATITUDE = 51.505;
-  const YOUR_LONGITUDE = -0.09;
+  const YOUR_LATITUDE = 17.54191601161015;
+  const YOUR_LONGITUDE = 78.3659428381569;
 
   useEffect(() => {
     if (!document.getElementById("map")._leaflet_id) {

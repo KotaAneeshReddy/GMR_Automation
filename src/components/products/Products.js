@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
 import "./ProductsStyles.css";
@@ -8,8 +8,13 @@ import productData from "../../data/ThreeProductData";
 
 const data1 = productData;
 
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
 function Products() {
   const [data, setData] = useState([...data1]);
+  const linkRef = useRef(null);
 
   const handleOpenModal = (productId) => {
     setData((prevData) =>
@@ -34,7 +39,7 @@ function Products() {
   };
 
   return (
-    <section id="products">
+    <section id="products" className="main-products">
       <h2>Products</h2>
       <div className="container products_container">
         {data.map((product) => (
@@ -60,14 +65,14 @@ function Products() {
           </article>
         ))}
       </div>
-      <Link to="/allproducts">
-        <a
-          href="#allproducts"
+      <Link to="/allproducts" innerRef={linkRef}>
+        <button
           id="all_products_btn"
           className="btn btn-primary"
+          onClick={() => scrollToTop()}
         >
           View All Products
-        </a>
+        </button>
       </Link>
     </section>
   );
