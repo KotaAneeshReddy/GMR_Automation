@@ -34,7 +34,7 @@ function Testimonials() {
           </div>
           <h5 className="client_name">Aneesh</h5>
           <small className="client_review">
-            Thrilled with my New Automated Gate with modren and sleek design!
+            Thrilled with my new automated gate with modren and sleek design!
             The installation process was smooth, and now I feel much safer at
             home. Thank you for the exceptional service!{" "}
           </small>
@@ -68,7 +68,7 @@ function Testimonials() {
           </div>
           <h5 className="client_name">Ashok</h5>
           <small className="client_review">
-            Outstanding Automated Gate Installation! The team was prompt,
+            Outstanding automated gate installation! The team was prompt,
             professional, and went above and beyond to ensure everything was
             installed perfectly. Highly recommend their services!{" "}
           </small>

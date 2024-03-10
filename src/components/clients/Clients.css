@@ -1,42 +1,9 @@
-/* .clients_container {
-  display: flex;
-  gap: 1rem;
-}
-.client-logo {
-  width: 20%;
-  height: 50%;
-  aspect-ratio: 6/4;
-  object-fit: cover; 
-} */
-
-/* .clients {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-  overflow: hidden;
-}
-
-.clients img {
-  width: auto; 
-  height: 100px; 
-  margin: 0 10px; 
-  transition: transform 0.5s ease; 
-}
-
-.clients {
-  text-align: center;
-} */
-
 .clients-section {
   text-align: center;
 }
 
 .clients {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  text-align: center;
 }
 
 .client-set {
@@ -44,9 +11,11 @@
 }
 
 .clients img {
+  display: inline-block; /* Display logos side by side */
   width: auto; /* Adjust width as needed */
   height: 100px; /* Adjust height as needed */
   margin: 0 10px; /* Adjust margin as needed */
+  background-color: transparent; /* Remove background color */
 }
 
 /* Media query for mobile devices */
