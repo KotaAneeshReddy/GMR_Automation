@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./AllProductsStyles.css";
+import { Link } from "react-router-dom";
 
 import productData from "../../data/ProductsData";
 import Carousel from "../carousel/Carousel";
@@ -45,7 +46,7 @@ function AllProducts() {
         <div className="container products_container">
           {data.map((product) => (
             <article key={product.id} className="product">
-              <div className="product_image">
+              {/* <div className="product_image">
                 <img
                   style={{
                     width: "100%",
@@ -57,7 +58,22 @@ function AllProducts() {
                   alt={product.title}
                 />
               </div>
-              <h3>{product.title}</h3>
+              <h3>{product.title}</h3> */}
+              <Link to={`/product/${product.id}`} className="product-link">
+                <div className="product_image">
+                  <img
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      borderRadius: "1.5rem",
+                    }}
+                    src={product.image_url}
+                    alt={product.title}
+                  />
+                </div>
+                <h3>{product.title}</h3>
+              </Link>
               <div className="product_cta">
                 <button
                   className="btn"

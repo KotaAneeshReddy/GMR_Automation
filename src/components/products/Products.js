@@ -42,12 +42,45 @@ function Products() {
     <section id="products" className="main-products">
       <h2>Products</h2>
       <div className="container products_container">
-        {data.map((product) => (
+        {/* {data.map((product) => (
           <article key={product.id} className="product">
             <div className="product_image">
               <img src={product.image_url} alt={product.title} />
             </div>
             <h3>{product.title}</h3>
+            <div className="product_cta">
+              <button
+                className="btn"
+                onClick={() => handleOpenModal(product.id)}
+              >
+                Get Quote
+              </button>
+            </div>
+            {product.openModal && (
+              <Modal
+                closeModal={() => handleCloseModal(product.id)}
+                productTitle={product.title}
+              />
+            )}
+          </article>
+        ))} */}
+
+        {data.map((product) => (
+          <article key={product.id} className="product">
+            {/* {console.log(product)} */}
+            {/* <Link
+              to={{
+                pathname: `/product/${product.id}`,
+                state: { product: product },
+              }}
+              className="product-link"
+            > */}
+            <Link to={`/product/${product.id}`} className="product-link">
+              <div className="product_image">
+                <img src={product.image_url} alt={product.title} />
+              </div>
+              <h3>{product.title}</h3>
+            </Link>
             <div className="product_cta">
               <button
                 className="btn"

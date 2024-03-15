@@ -15,7 +15,13 @@ function Contact() {
   useEffect(() => {
     if (!document.getElementById("map")._leaflet_id) {
       // Initialize map
-      const map = L.map("map").setView([YOUR_LATITUDE, YOUR_LONGITUDE], 13);
+      const map = L.map("map", {
+        scrollWheelZoom: false,
+        dragging: false, // Disable dragging
+        zoomControl: false, // Disable zoom control
+      }).setView([YOUR_LATITUDE, YOUR_LONGITUDE], 13);
+
+      // const map = L.map("map").setView([YOUR_LATITUDE, YOUR_LONGITUDE], 13);
 
       // Add tile layer
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {

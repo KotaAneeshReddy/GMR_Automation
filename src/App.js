@@ -1,25 +1,25 @@
-import About from "./components/about/About";
 import AllProducts from "./components/all_products/AllProducts";
-import Contact from "./components/contact/Contact";
-import Footer from "./components/footer/Footer";
 import Home from "./components/home/Home";
-import Navbar from "./components/navbar/Navbar";
-import Products from "./components/products/Products";
-import Testimonials from "./components/testimonials/Testimonials";
 
+import { ProductProvider } from "./ProductContext";
+import productData from "./data/ProductsData";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import Knowmore from "./components/knowmore/Knowmore";
+import ProductDetail from "./components/productDetail/ProductDetail";
 
 function App() {
   return (
     <BrowserRouter>
       <Layout>
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/allproducts" element={<AllProducts />}></Route>
-          <Route path="/aboutus" element={<Knowmore />}></Route>
-        </Routes>
+        <ProductProvider value={productData}>
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/allproducts" element={<AllProducts />}></Route>
+            <Route path="/product/:id" element={<ProductDetail />} />
+            <Route path="/aboutus" element={<Knowmore />}></Route>
+          </Routes>
+        </ProductProvider>
       </Layout>
     </BrowserRouter>
     // <div className="App">
