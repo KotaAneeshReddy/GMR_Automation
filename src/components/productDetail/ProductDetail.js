@@ -35,10 +35,10 @@ const ProductDetail = () => {
       <Navbar />
       <section className="product_detail">
         <div className="container product_detail_container">
-          <div className="product_image">
+          <div className="container product_image">
             <img src={product.image_url} alt={product.title} />
           </div>
-          <div className="product_details">
+          <div className="container product_details">
             <h2>{product.title}</h2>
             <p>{product.description}</p>
             <div className="product_cta">
