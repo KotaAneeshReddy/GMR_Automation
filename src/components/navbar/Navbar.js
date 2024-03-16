@@ -1,14 +1,12 @@
 import "./NavbarStyles.css";
 import logoSvg from "../../assets/images/logo.png";
-
 import { useState } from "react";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { faCircleXmark } from "@fortawesome/free-regular-svg-icons";
-import { Link } from "react-router-dom";
+import { faBars, faCircleXmark } from "@fortawesome/free-solid-svg-icons";
+import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
+  const location = useLocation(); // Get current location
   const [clicked, setClicked] = useState(false);
 
   const handleClicked = () => {
@@ -23,21 +21,29 @@ function Navbar() {
         </a>
 
         <div>
-          <ul id="navbar" className={clicked ? "#navbar active" : "#navbar"}>
+          <ul id="navbar" className={clicked ? "active" : ""}>
             <li>
-              <a className="active" href="/">
+              <Link
+                className={location.pathname === "/" ? "active" : ""}
+                to="/"
+              >
                 Home
-              </a>
-            </li>
-            <li>
-              <Link to="/allproducts">
-                <a href="#products">Products</a>
               </Link>
             </li>
             <li>
-              <Link to="/aboutus">
-                {" "}
-                <a href="#Projects">About</a>
+              <Link
+                className={location.pathname === "/allproducts" ? "active" : ""}
+                to="/allproducts"
+              >
+                Products
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={location.pathname === "/aboutus" ? "active" : ""}
+                to="/aboutus"
+              >
+                About
               </Link>
             </li>
             <li>
@@ -49,12 +55,10 @@ function Navbar() {
         </div>
 
         <div id="navbar-mobile" onClick={handleClicked}>
-          {/* <FontAwesomeIcon icon="fa-solid fa-bars" /> */}
           <FontAwesomeIcon
             className="bar"
             icon={clicked ? faCircleXmark : faBars}
           />
-          {/* <FontAwesomeIcon className="bar" icon={faCircleXmark} /> */}
         </div>
       </nav>
     </div>

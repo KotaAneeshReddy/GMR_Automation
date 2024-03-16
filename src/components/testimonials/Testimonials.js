@@ -26,6 +26,7 @@ function Testimonials() {
         scrollbar={{ draggable: true }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("Slide Change")}
+        // style={{ height: "400px" }}
       >
         {/* Generate this article dynamically using array */}
         <SwiperSlide className="testimonial">
